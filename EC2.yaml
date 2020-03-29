@@ -1,0 +1,16 @@
+-  name: ec2 server
+   hosts: localhost
+   connection: local
+   tasks:   
+  - name: Launch ec2
+    ec2:
+      instance_type:
+      key_name: test
+      image: ami-0fc61db8544a617ed
+      region: us-east-1
+      count: 1
+      vpc_subnet_id: subnet-12f4dd3d
+      wait: yes
+      assign_public_ip: yes
+	  aws_secret_key:7DhscJreJ+OPGAwFTIbq+q6VjBFW4goHK5ALMZ40
+	  aws_access_key:AKIAJVSIW3UR6DWWDZ2Q
